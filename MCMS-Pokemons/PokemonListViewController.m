@@ -11,6 +11,7 @@
 
 @interface PokemonListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end
 
@@ -36,6 +37,14 @@
 
 
     return cell;
+}
+- (IBAction)onAddButtonTapped:(UIButton *)sender
+{
+    MagicalCreature *someCreature = [[MagicalCreature alloc] initWithFullName:self.nameTextField.text];
+    [self.pokemons addObject:someCreature];
+    self.nameTextField.text = @"";
+
+    [self.tableView reloadData];
 }
 
 
