@@ -15,6 +15,7 @@
 		F2D964AA1AB8E4F000D07ECD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D964A81AB8E4F000D07ECD /* LaunchScreen.xib */; };
 		F2D964B61AB8E4F000D07ECD /* MCMS_PokemonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D964B51AB8E4F000D07ECD /* MCMS_PokemonsTests.m */; };
 		F2D964C11AB8E62600D07ECD /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D964C01AB8E62600D07ECD /* MagicalCreature.m */; };
+		F2D964C41AB8F37400D07ECD /* PokemonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D964C31AB8F37400D07ECD /* PokemonDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		F2D964B51AB8E4F000D07ECD /* MCMS_PokemonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCMS_PokemonsTests.m; sourceTree = "<group>"; };
 		F2D964BF1AB8E62600D07ECD /* MagicalCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalCreature.h; sourceTree = "<group>"; };
 		F2D964C01AB8E62600D07ECD /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
+		F2D964C21AB8F37400D07ECD /* PokemonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonDetailViewController.h; sourceTree = "<group>"; };
+		F2D964C31AB8F37400D07ECD /* PokemonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				F2D9649D1AB8E4F000D07ECD /* AppDelegate.h */,
+				F2D964C21AB8F37400D07ECD /* PokemonDetailViewController.h */,
+				F2D964C31AB8F37400D07ECD /* PokemonDetailViewController.m */,
 				F2D964BF1AB8E62600D07ECD /* MagicalCreature.h */,
 				F2D964C01AB8E62600D07ECD /* MagicalCreature.m */,
 				F2D9649E1AB8E4F000D07ECD /* AppDelegate.m */,
@@ -226,6 +231,7 @@
 			files = (
 				F2D964A21AB8E4F000D07ECD /* PokemonListViewController.m in Sources */,
 				F2D964C11AB8E62600D07ECD /* MagicalCreature.m in Sources */,
+				F2D964C41AB8F37400D07ECD /* PokemonDetailViewController.m in Sources */,
 				F2D9649F1AB8E4F000D07ECD /* AppDelegate.m in Sources */,
 				F2D9649C1AB8E4F000D07ECD /* main.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "PokemonListViewController.h"
 #import "MagicalCreature.h"
+#import "PokemonDetailViewController.h"
 
 @interface PokemonListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -29,15 +30,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.pokemons.count;
 }
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cellID"];
 
-   MagicalCreature *somePokemon = [self.pokemons objectAtIndex:indexPath.row];
-    cell.textLabel.text = somePokemon.name;
-
-
-    return cell;
-}
 - (IBAction)onAddButtonTapped:(UIButton *)sender
 {
     MagicalCreature *someCreature = [[MagicalCreature alloc] initWithFullName:self.nameTextField.text];
@@ -46,7 +39,27 @@
 
     [self.tableView reloadData];
 }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    PokemonDetailViewController *pokemonDVC = [segue destinationViewController];
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    MagicalCreature *selectedPokemon = [self.pokemons objectAtIndex:selectedIndexPath.row];
 
+    pokemonDVC.selectedPokemon = selectedPokemon;
+
+}
+
+
+
+#pragma mark - UITableViewDelegate Protocols
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cellID"];
+
+    MagicalCreature *somePokemon = [self.pokemons objectAtIndex:indexPath.row];
+    cell.textLabel.text = somePokemon.name;
+
+
+    return cell;
+}
 
 
 @end
