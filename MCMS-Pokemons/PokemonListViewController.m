@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *PokemonTypeTextField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *battleButton;
 
 @end
 
@@ -30,6 +31,9 @@
 
 
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.pokemons.count;
@@ -44,18 +48,28 @@
     [self.tableView reloadData];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+//    if ([segue.identifier isEqualToString:@"ShowPokemonSegue"]) {
+
+
     PokemonDetailViewController *pokemonDVC = [segue destinationViewController];
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     MagicalCreature *selectedPokemon = [self.pokemons objectAtIndex:selectedIndexPath.row];
 
     pokemonDVC.selectedPokemon = selectedPokemon;
-
-
-    BattleViewController *battleVC = [segue destinationViewController];
-    NSString *winnerPokemon = [self.pokemons objectAtIndex:rand()];
-    battleVC.winnerPokemonName = winnerPokemon;
+//           [self performSegueWithIdentifier:@"ShowPokemonSegue" sender:self];
+//
+//    }else if ([segue.identifier isEqualToString:@"toBattle"]) {
+//        [self performSegueWithIdentifier:@"toBattle" sender:self];
+//
+//        }
+//
+//    BattleViewController *battleVC = [segue destinationViewController];
+//    NSString *winnerPokemon = [self.pokemons objectAtIndex:rand()];
+//    battleVC.winnerPokemonName = winnerPokemon;
 
 }
+
 
 
 #pragma mark - UITableViewDelegate Protocols

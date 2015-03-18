@@ -60,6 +60,9 @@
         self.editNameTextField.enabled = false;
 
         self.pokemonNameLabel.text = self.editNameTextField.text;
+        self.selectedPokemon.name = self.editNameTextField.text;
+        
+
     }
 
 }

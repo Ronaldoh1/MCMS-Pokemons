@@ -136,13 +136,14 @@
                     <navigationItem key="navigationItem" id="IMf-vT-SSQ">
                         <barButtonItem key="rightBarButtonItem" title="Battle" id="KdU-O4-HZi">
                             <connections>
-                                <segue destination="x3a-ib-KJt" kind="push" id="FPV-VV-M80"/>
+                                <segue destination="x3a-ib-KJt" kind="show" identifier="toBattle" id="KQg-3L-cae"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="PokemonTypeTextField" destination="nLE-LT-G1N" id="Bb2-Wr-YxT"/>
+                        <outlet property="battleButton" destination="KdU-O4-HZi" id="ZET-0h-CIV"/>
                         <outlet property="nameTextField" destination="g9T-Pl-6un" id="TIA-Tz-Srm"/>
                         <outlet property="tableView" destination="7uU-WZ-k1J" id="DeX-el-k1T"/>
                     </connections>
