@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E43EF221AB93A4100383E94 /* BattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E43EF211AB93A4100383E94 /* BattleViewController.m */; };
 		F2D9649C1AB8E4F000D07ECD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D9649B1AB8E4F000D07ECD /* main.m */; };
 		F2D9649F1AB8E4F000D07ECD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D9649E1AB8E4F000D07ECD /* AppDelegate.m */; };
 		F2D964A21AB8E4F000D07ECD /* PokemonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D964A11AB8E4F000D07ECD /* PokemonListViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E43EF201AB93A4100383E94 /* BattleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleViewController.h; sourceTree = "<group>"; };
+		3E43EF211AB93A4100383E94 /* BattleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleViewController.m; sourceTree = "<group>"; };
 		F2D964961AB8E4F000D07ECD /* MCMS-Pokemons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MCMS-Pokemons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D9649A1AB8E4F000D07ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2D9649B1AB8E4F000D07ECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,13 +97,15 @@
 			isa = PBXGroup;
 			children = (
 				F2D9649D1AB8E4F000D07ECD /* AppDelegate.h */,
+				F2D9649E1AB8E4F000D07ECD /* AppDelegate.m */,
 				F2D964C21AB8F37400D07ECD /* PokemonDetailViewController.h */,
 				F2D964C31AB8F37400D07ECD /* PokemonDetailViewController.m */,
 				F2D964BF1AB8E62600D07ECD /* MagicalCreature.h */,
 				F2D964C01AB8E62600D07ECD /* MagicalCreature.m */,
-				F2D9649E1AB8E4F000D07ECD /* AppDelegate.m */,
 				F2D964A01AB8E4F000D07ECD /* PokemonListViewController.h */,
 				F2D964A11AB8E4F000D07ECD /* PokemonListViewController.m */,
+				3E43EF201AB93A4100383E94 /* BattleViewController.h */,
+				3E43EF211AB93A4100383E94 /* BattleViewController.m */,
 				F2D964A31AB8E4F000D07ECD /* Main.storyboard */,
 				F2D964A61AB8E4F000D07ECD /* Images.xcassets */,
 				F2D964C51AB9103500D07ECD /* dratini.png */,
@@ -243,6 +248,7 @@
 			files = (
 				F2D964A21AB8E4F000D07ECD /* PokemonListViewController.m in Sources */,
 				F2D964C11AB8E62600D07ECD /* MagicalCreature.m in Sources */,
+				3E43EF221AB93A4100383E94 /* BattleViewController.m in Sources */,
 				F2D964C41AB8F37400D07ECD /* PokemonDetailViewController.m in Sources */,
 				F2D9649F1AB8E4F000D07ECD /* AppDelegate.m in Sources */,
 				F2D9649C1AB8E4F000D07ECD /* main.m in Sources */,
@@ -438,6 +444,7 @@
 				F2D964BB1AB8E4F000D07ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2D964BC1AB8E4F000D07ECD /* Build configuration list for PBXNativeTarget "MCMS-PokemonsTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +453,7 @@
 				F2D964BE1AB8E4F000D07ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

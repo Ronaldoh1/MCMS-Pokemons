@@ -9,6 +9,7 @@
 #import "PokemonListViewController.h"
 #import "MagicalCreature.h"
 #import "PokemonDetailViewController.h"
+#import "BattleViewController.h"
 
 @interface PokemonListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -49,8 +50,12 @@
 
     pokemonDVC.selectedPokemon = selectedPokemon;
 
-}
 
+    BattleViewController *battleVC = [segue destinationViewController];
+    NSString *winnerPokemon = [self.pokemons objectAtIndex:rand()];
+    battleVC.winnerPokemonName = winnerPokemon;
+
+}
 
 
 #pragma mark - UITableViewDelegate Protocols
@@ -65,6 +70,8 @@
 
     return cell;
 }
+
+
 
 
 @end

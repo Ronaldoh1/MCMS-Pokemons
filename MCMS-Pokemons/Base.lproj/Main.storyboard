@@ -5,6 +5,49 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Battle View Controller-->
+        <scene sceneID="TX8-6R-X2V">
+            <objects>
+                <viewController id="x3a-ib-KJt" customClass="BattleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SgI-lB-vaF"/>
+                        <viewControllerLayoutGuide type="bottom" id="OqR-c4-Y9d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q6P-9i-mKT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2AJ-RE-sDH">
+                                <rect key="frame" x="56" y="262" width="303" height="212"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42C-Ok-Jok">
+                                <rect key="frame" x="186" y="206" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="2AJ-RE-sDH" secondAttribute="centerY" id="10j-Bg-6tZ"/>
+                            <constraint firstItem="2AJ-RE-sDH" firstAttribute="leading" secondItem="Q6P-9i-mKT" secondAttribute="leadingMargin" constant="40" id="JiQ-qp-F8o"/>
+                            <constraint firstItem="2AJ-RE-sDH" firstAttribute="top" secondItem="42C-Ok-Jok" secondAttribute="bottom" constant="35" id="KLT-vR-asW"/>
+                            <constraint firstItem="OqR-c4-Y9d" firstAttribute="top" secondItem="2AJ-RE-sDH" secondAttribute="bottom" constant="262" id="cbc-RD-uXQ"/>
+                            <constraint firstAttribute="centerX" secondItem="42C-Ok-Jok" secondAttribute="centerX" id="kvx-d1-yaW"/>
+                            <constraint firstAttribute="centerX" secondItem="2AJ-RE-sDH" secondAttribute="centerX" id="tU4-26-K3j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jG8-Kv-88b"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="battleImageView" destination="2AJ-RE-sDH" id="6SX-4t-Lxh"/>
+                        <outlet property="battleLabel" destination="42C-Ok-Jok" id="ho4-tY-vLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVs-69-zdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="-571"/>
+        </scene>
         <!--Pokemon List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -90,7 +133,13 @@
                             <constraint firstItem="ZxR-K9-TEX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zKU-xb-ph4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IMf-vT-SSQ"/>
+                    <navigationItem key="navigationItem" id="IMf-vT-SSQ">
+                        <barButtonItem key="rightBarButtonItem" title="Battle" id="KdU-O4-HZi">
+                            <connections>
+                                <segue destination="x3a-ib-KJt" kind="push" id="FPV-VV-M80"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="PokemonTypeTextField" destination="nLE-LT-G1N" id="Bb2-Wr-YxT"/>
@@ -202,7 +251,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDY-Tc-hRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="276" y="-447"/>
+            <point key="canvasLocation" x="1092" y="-571"/>
         </scene>
     </scenes>
 </document>
