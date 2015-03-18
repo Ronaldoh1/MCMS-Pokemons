@@ -13,6 +13,7 @@
 
 @property MagicalCreature *pokemonName;
 @property MagicalCreature *pokemonType;
+@property NSMutableArray *pokemonAttack;
 @property MagicalCreature *selectedPokemon;
 
 @end

@@ -48,13 +48,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LCL-Lo-711">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gRK-ZZ-Wll">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -117,7 +117,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="685-60-mog">
                                 <rect key="frame" x="137" y="72" width="140" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q53-8N-fEr">
@@ -128,13 +128,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNy-9B-xDr">
                                 <rect key="frame" x="87" y="145" width="240" height="186"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3mv-Z3-zyd">
+                                <rect key="frame" x="-2" y="349" width="419" height="343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" id="FG3-1X-3cM">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FG3-1X-3cM" id="8x1-4W-9wj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2Na-Cm-yas" id="xVn-vd-0r8"/>
+                                    <outlet property="delegate" destination="2Na-Cm-yas" id="Xbb-LU-Olz"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3mv-Z3-zyd" secondAttribute="trailing" constant="-19" id="2MF-MQ-OfH"/>
                             <constraint firstAttribute="centerX" secondItem="RNy-9B-xDr" secondAttribute="centerX" id="5sm-9C-FVl"/>
                             <constraint firstItem="RNy-9B-xDr" firstAttribute="top" secondItem="ndJ-mk-IzG" secondAttribute="topMargin" constant="145" id="6dc-VY-5w8"/>
                             <constraint firstItem="Qfg-9e-G4B" firstAttribute="top" secondItem="RNy-9B-xDr" secondAttribute="bottom" constant="361" id="KNf-MM-S2S"/>
+                            <constraint firstItem="3mv-Z3-zyd" firstAttribute="leading" secondItem="ndJ-mk-IzG" secondAttribute="leadingMargin" constant="-18" id="TY1-Da-iaD"/>
+                            <constraint firstItem="3mv-Z3-zyd" firstAttribute="top" secondItem="RNy-9B-xDr" secondAttribute="bottom" constant="18" id="ewI-2h-l8D"/>
+                            <constraint firstItem="Qfg-9e-G4B" firstAttribute="top" secondItem="3mv-Z3-zyd" secondAttribute="bottom" id="f4g-DA-rWN"/>
                             <constraint firstItem="RNy-9B-xDr" firstAttribute="leading" secondItem="ndJ-mk-IzG" secondAttribute="leadingMargin" constant="71" id="h6K-Rh-Ufw"/>
+                            <constraint firstItem="Qfg-9e-G4B" firstAttribute="top" secondItem="3mv-Z3-zyd" secondAttribute="bottom" id="iyN-4O-ixA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RNy-9B-xDr" secondAttribute="trailing" constant="71" id="q5v-Id-6Ax"/>
                         </constraints>
                         <variation key="default">
@@ -154,6 +175,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="attackTableView" destination="3mv-Z3-zyd" id="4Fo-d1-TRy"/>
                         <outlet property="editNameTextField" destination="Q53-8N-fEr" id="b4R-vQ-f5e"/>
                         <outlet property="pokemonImage" destination="RNy-9B-xDr" id="40X-Ri-N44"/>
                         <outlet property="pokemonNameLabel" destination="685-60-mog" id="nTI-Qy-UFI"/>

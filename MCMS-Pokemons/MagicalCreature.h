@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface MagicalCreature : NSObject
-@property NSString  *name;
-@property NSString  *type;
+@property NSString *name;
+@property NSString *type;
 
 -(instancetype) initWithFullName:(NSString *)pokemonName andWithType:(NSString *)pokemonType;
 
