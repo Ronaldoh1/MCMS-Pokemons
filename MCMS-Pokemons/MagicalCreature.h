@@ -10,8 +10,9 @@
 
 @interface MagicalCreature : NSObject
 @property NSString  *name;
+@property NSString  *type;
 
--(instancetype) initWithFullName:(NSString *)pokemonName;
+-(instancetype) initWithFullName:(NSString *)pokemonName andWithType:(NSString *)pokemonType;
 
 
 @end

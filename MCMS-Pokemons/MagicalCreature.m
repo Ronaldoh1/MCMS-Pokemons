@@ -10,9 +10,10 @@
 
 @implementation MagicalCreature
 
--(instancetype) initWithFullName:(NSString *) pokemonName{
+-(instancetype) initWithFullName:(NSString *)pokemonName andWithType:(NSString *)pokemonType{
     self = [super init];
     self.name = pokemonName;
+    self.type = pokemonType;
 
     return self;
 }

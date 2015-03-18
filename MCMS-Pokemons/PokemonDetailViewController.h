@@ -12,6 +12,7 @@
 @interface PokemonDetailViewController : UIViewController
 
 @property MagicalCreature *pokemonName;
+@property MagicalCreature *pokemonType;
 @property MagicalCreature *selectedPokemon;
 
 @end

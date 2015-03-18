@@ -13,6 +13,7 @@
 @interface PokemonListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *PokemonTypeTextField;
 
 @end
 
@@ -20,9 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MagicalCreature *pokemon1 = [[MagicalCreature alloc] initWithFullName:@"Pikachu"];
-    MagicalCreature *pokemon2 = [[MagicalCreature alloc] initWithFullName:@"Dratini"];
-    MagicalCreature *pokemon3 = [[MagicalCreature alloc] initWithFullName:@"Mew"];
+    MagicalCreature *pokemon1 = [[MagicalCreature alloc] initWithFullName:@"Pikachu" andWithType:@"Electric"];
+    MagicalCreature *pokemon2 = [[MagicalCreature alloc] initWithFullName:@"Dratini" andWithType:@"Dragon"];
+    MagicalCreature *pokemon3 = [[MagicalCreature alloc] initWithFullName:@"Mew" andWithType:@"Psychic"];
 
     self.pokemons = [NSMutableArray arrayWithObjects:pokemon1,pokemon2,pokemon3, nil];
 
@@ -33,7 +34,7 @@
 
 - (IBAction)onAddButtonTapped:(UIButton *)sender
 {
-    MagicalCreature *someCreature = [[MagicalCreature alloc] initWithFullName:self.nameTextField.text];
+    MagicalCreature *someCreature = [[MagicalCreature alloc] initWithFullName:self.nameTextField.text andWithType:self.PokemonTypeTextField.text];
     [self.pokemons addObject:someCreature];
     self.nameTextField.text = @"";
 
@@ -55,7 +56,9 @@
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cellID"];
 
     MagicalCreature *somePokemon = [self.pokemons objectAtIndex:indexPath.row];
+
     cell.textLabel.text = somePokemon.name;
+    cell.detailTextLabel.text = somePokemon.type;
 
 
     return cell;

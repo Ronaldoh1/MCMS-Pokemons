@@ -16,6 +16,9 @@
 		F2D964B61AB8E4F000D07ECD /* MCMS_PokemonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D964B51AB8E4F000D07ECD /* MCMS_PokemonsTests.m */; };
 		F2D964C11AB8E62600D07ECD /* MagicalCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D964C01AB8E62600D07ECD /* MagicalCreature.m */; };
 		F2D964C41AB8F37400D07ECD /* PokemonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D964C31AB8F37400D07ECD /* PokemonDetailViewController.m */; };
+		F2D964C81AB9103500D07ECD /* dratini.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D964C51AB9103500D07ECD /* dratini.png */; };
+		F2D964C91AB9103500D07ECD /* mew.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D964C61AB9103500D07ECD /* mew.png */; };
+		F2D964CA1AB9103500D07ECD /* pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D964C71AB9103500D07ECD /* pikachu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		F2D964C01AB8E62600D07ECD /* MagicalCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalCreature.m; sourceTree = "<group>"; };
 		F2D964C21AB8F37400D07ECD /* PokemonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonDetailViewController.h; sourceTree = "<group>"; };
 		F2D964C31AB8F37400D07ECD /* PokemonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonDetailViewController.m; sourceTree = "<group>"; };
+		F2D964C51AB9103500D07ECD /* dratini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dratini.png; sourceTree = "<group>"; };
+		F2D964C61AB9103500D07ECD /* mew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mew.png; sourceTree = "<group>"; };
+		F2D964C71AB9103500D07ECD /* pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikachu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 				F2D964A11AB8E4F000D07ECD /* PokemonListViewController.m */,
 				F2D964A31AB8E4F000D07ECD /* Main.storyboard */,
 				F2D964A61AB8E4F000D07ECD /* Images.xcassets */,
+				F2D964C51AB9103500D07ECD /* dratini.png */,
+				F2D964C61AB9103500D07ECD /* mew.png */,
+				F2D964C71AB9103500D07ECD /* pikachu.png */,
 				F2D964A81AB8E4F000D07ECD /* LaunchScreen.xib */,
 				F2D964991AB8E4F000D07ECD /* Supporting Files */,
 			);
@@ -210,8 +219,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D964A51AB8E4F000D07ECD /* Main.storyboard in Resources */,
+				F2D964C81AB9103500D07ECD /* dratini.png in Resources */,
 				F2D964AA1AB8E4F000D07ECD /* LaunchScreen.xib in Resources */,
 				F2D964A71AB8E4F000D07ECD /* Images.xcassets in Resources */,
+				F2D964C91AB9103500D07ECD /* mew.png in Resources */,
+				F2D964CA1AB9103500D07ECD /* pikachu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
