@@ -8,6 +8,7 @@
 
 #import "PokemonDetailViewController.h"
 #import "MagicalCreature.h"
+#import "PokemonListViewController.h"
 
 @interface PokemonDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -57,6 +58,8 @@
         sender.title = @"Edit";
         self.editNameTextField.alpha = 0;
         self.editNameTextField.enabled = false;
+
+        self.pokemonNameLabel.text = self.editNameTextField.text;
     }
 
 }
@@ -99,6 +102,20 @@
 {
     return self.pokemonAttack.count;
 }
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    PokemonListViewController *pokemonLVC = [segue destinationViewController];
+////    //NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+//   MagicalCreature *changedPokemon = [[MagicalCreature alloc] initWithFullName:self.editNameTextField.text andWithType:nil];
+//    pokemonLVC.pokemonName = changedPokemon;
+//
+//    
+//
+//    //   //
+//// pokemonLVC.pokemonName =
+//
+//}
+
 
 
 @end

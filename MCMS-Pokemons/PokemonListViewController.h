@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MagicalCreature.h"
 
 @interface PokemonListViewController : UIViewController
 
 @property NSMutableArray *pokemons;
+@property MagicalCreature *pokemonName;
 
 @end
 

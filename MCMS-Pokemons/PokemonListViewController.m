@@ -27,7 +27,9 @@
 
     self.pokemons = [NSMutableArray arrayWithObjects:pokemon1,pokemon2,pokemon3, nil];
 
+
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.pokemons.count;
 }
